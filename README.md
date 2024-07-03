@@ -1,8 +1,6 @@
 # 🫶 Eigen Donation
 
 <h4 align="center">
-  <img src="logo.png" alt="Eigen Donation" />
-  <br>
   <br> |
   <a href="https://donationappreciation.vercel.app/">Website</a>
 </h4>
