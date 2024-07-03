@@ -5,7 +5,9 @@
   "workspaces": {
     "packages": [
       "packages/hardhat",
-      "packages/nextjs"
+      "packages/nextjs",
+      "packages/subgraph",
+      "packages/subgraph-sepolia"
     ]
   },
   "scripts": {
@@ -42,5 +44,9 @@
   },
   "engines": {
     "node": ">=18.17.0"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.10.4",
+    "graphql": "^16.8.1"
   }
 }

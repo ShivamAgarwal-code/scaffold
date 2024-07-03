@@ -3,7 +3,7 @@ export * from "./useBurnerWallet";
 export * from "./useContractLogs";
 export * from "./useDeployedContractInfo";
 export * from "./useFetchBlocks";
-export * from "./useInitializeNativeCurrencyPrice";
+export * from "./useNativeCurrencyPrice";
 export * from "./useNetworkColor";
 export * from "./useOutsideClick";
 export * from "./useScaffoldContract";

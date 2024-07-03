@@ -8,19 +8,29 @@ import { Toaster } from "react-hot-toast";
 import { WagmiProvider } from "wagmi";
 import { Footer } from "~~/components/Footer";
 import { Header } from "~~/components/Header";
+import { Info } from "~~/components/Info";
 import { BlockieAvatar } from "~~/components/scaffold-eth";
 import { ProgressBar } from "~~/components/scaffold-eth/ProgressBar";
-import { useInitializeNativeCurrencyPrice } from "~~/hooks/scaffold-eth";
+import { useNativeCurrencyPrice } from "~~/hooks/scaffold-eth";
+import { useGlobalState } from "~~/services/store/store";
 import { wagmiConfig } from "~~/services/web3/wagmiConfig";
 
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
-  useInitializeNativeCurrencyPrice();
+  const price = useNativeCurrencyPrice();
+  const setNativeCurrencyPrice = useGlobalState(state => state.setNativeCurrencyPrice);
+
+  useEffect(() => {
+    if (price > 0) {
+      setNativeCurrencyPrice(price);
+    }
+  }, [setNativeCurrencyPrice, price]);
 
   return (
     <>
       <div className="flex flex-col min-h-screen">
         <Header />
-        <main className="relative flex flex-col flex-1">{children}</main>
+        <main className="relative flex flex-col flex-1 mx-auto max-w-[900px]">{children}</main>
+        <Info />
         <Footer />
       </div>
       <Toaster />
