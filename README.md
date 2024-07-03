@@ -40,10 +40,6 @@ We created our own Eigenlayer AVS to verify the total value of the donated ERC20
 
 Also we fixed a bug in the Hello World repo, which caused issues when executing the make commands. After the hackathon we will submit a PR to the repo for this. Also we added 1 additional step in the readme, to help people get started more easily.
 
-- [Github AVS repo](https://github.com/prahahackers24/AVS-PRAGUE)
-- [Bugfix](https://github.com/prahahackers24/AVS-PRAGUE/blob/fe4c2c893bbc27046006a4c1b04e01d217dad29b/Makefile#L48-L52)
-- [Readme update](https://github.com/prahahackers24/AVS-PRAGUE/blob/fe4c2c893bbc27046006a4c1b04e01d217dad29b/README.md?plain=1#L27)
-
 
 ## Links
 
